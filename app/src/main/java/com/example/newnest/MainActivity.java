@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     EditText email, password;
-    TextView goToSignUp;
+    TextView goToSignUp, GoToResetP;
     Button login;
     FirebaseServices services;
     @Override
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.loginPasswordET);
         login = findViewById(R.id.loginBTN);
         goToSignUp = findViewById(R.id.goToSignUpTV);
+        GoToResetP=findViewById(R.id.resetPasswordTV);
         services = new FirebaseServices();
         FirebaseUser user = services.getAuth().getCurrentUser();
         if (user != null) {
@@ -45,7 +46,13 @@ public class MainActivity extends AppCompatActivity {
             // User is signed out
             Log.d("", "onAuthStateChanged:signed_out");
         }
-
+        GoToResetP.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              Intent RESET = new Intent(MainActivity.this, ResetPassActivity.class);
+              startActivity(RESET);
+          }
+        });
         goToSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

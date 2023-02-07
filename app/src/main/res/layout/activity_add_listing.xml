@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7F7F7"
+
     tools:context=".AddListingActivity">
 
     <ScrollView
@@ -33,7 +35,7 @@
                 android:id="@+id/listingTypeSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="15dp" />
 
             <EditText
                 android:id="@+id/listingAddressET"

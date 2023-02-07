@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7F7F7"
     tools:context=".MainActivity">
 
     <EditText
@@ -58,4 +59,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginEmailET"
         app:layout_constraintVertical_bias="0.487" />
+
+    <TextView
+        android:id="@+id/resetPasswordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="Forgot password? Reset it!"
+        app:layout_constraintStart_toStartOf="@+id/loginPasswordET"
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordET" />
 </androidx.constraintlayout.widget.ConstraintLayout>
